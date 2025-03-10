@@ -4,7 +4,6 @@ import { routeTree } from './route-tree';
 
 const history = createHashHistory();
 
-
 export const router = createRouter({
   routeTree,
   history,
