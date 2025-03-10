@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite';
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
 
 export default defineConfig({
+  base: './',
   envPrefix: 'PUBLIC_',
   plugins: [
     TanStackRouterVite({
@@ -15,5 +16,6 @@ export default defineConfig({
         plugins: ['@emotion'],
       },
     }),
+    splitVendorChunkPlugin(),
   ],
 });
